@@ -1,8 +1,10 @@
 #!/bin/bash
 
-cmake -B /bin/fanWatch/build .
+cmake -B /tmp/build .
 
-cmake --build /bin/fanWatch/build
+cmake --build /tmp/build
+
+sudo cp /tmp/build/fanWatch /usr/local/bin/
 
 sudo mkdir -p /usr/local/lib/systemd/system/
 
@@ -13,7 +15,7 @@ Description=notification of heat CPU
 
 [Service]
 Type=simple
-ExecStart=/bin/fanWatch/fanWatch
+ExecStart=/usr/local/bin/fanWatch
 Restart=always"| sudo tee fanWatch.service
 
 sudo systemctl daemon-reload
