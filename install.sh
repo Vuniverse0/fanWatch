@@ -1,12 +1,8 @@
 #!/bin/bash
 
-cd /bin/fanWatch
+cmake -B /bin/fanWatch/build .
 
-git clone git@github.com:Vuniverse0/fanWatch.git
-
-cmake -B build .
-
-cmake --build build
+cmake --build /bin/fanWatch/build
 
 sudo mkdir -p /usr/local/lib/systemd/system/
 
