@@ -14,6 +14,6 @@
  2. --  glib-2.0
  3. --  'gtk+-2.0'
 
-
-    ```sudo apt-get install gtk2.0
-    ```sudo apt-get install -y libnotify-dev
+    ```
+    sudo apt-get install gtk2.0
+    sudo apt-get install -y libnotify-dev
